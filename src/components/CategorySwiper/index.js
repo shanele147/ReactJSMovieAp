@@ -50,9 +50,9 @@ function CategorySwiper(props) {
             className="mySwiper"
           >
             {movies}
+            <div className="fadeEnd"></div>
           </Swiper>
         </div>
-        <div className="col-1"></div>
       </div>
     </div>
   );
