@@ -20,7 +20,7 @@ li:first-child {
 }
 
 .section-wrapper {
-  padding: 6rem 0;
+  padding: 3rem 0;
   font-size: 1.25rem;
   line-height: 1.2;
 }
@@ -100,12 +100,12 @@ li:first-child {
   animation: pulse 1s ease-in-out;
 }
 
-.trailer {
+div.trailer {
   position: relative;
 }
 
 .activePoster {
-  background: url("/public/play-button-youtube-logo.jpeg") no-repeat center
+  background: url("/public/youtube-thumbnail.png") no-repeat center
     center;
   background-size: cover;
   bottom: 0;
@@ -122,13 +122,36 @@ li:first-child {
   cursor: pointer;
 }
 
-.youtube-trailer {
+iframe.youtube-trailer {
   width: 100%;
   height: auto;
   aspect-ratio: 16/9;
   margin-top: 5rem;
 }
 
+.castSwiper {
+  height: 13rem;
+  max-height: 13rem;
+  margin-bottom: 1rem;
+  margin-top: 3rem;
+}
+
+.castSwiper .swiper-wrapper {
+  height: 80%;
+}
+
+.castSwiper .swiper-slide {
+  background-color: inherit;
+}
+
+.castSwiper .swiper-slide img {
+  border-radius: 0.5rem;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
+  cursor: grab;
+}
 /* animation pulse */
 @keyframes pulse {
   0% {

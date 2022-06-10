@@ -24,7 +24,7 @@
 .swiper-slide {
   text-align: center;
   font-size: 18px;
-  background-color: #041622;
+  background-color: #26282b;
 
   /* Center slide text vertically */
   display: -webkit-box;
@@ -63,4 +63,13 @@
   max-height: 90%;
 }
 
-
+/* .mySwiper:after {
+  content: "";
+  background: linear-gradient(to right, #04162200, #041622 90%);
+  height: 100%;
+  position: absolute;
+  right: 0;
+  width: 11rem;
+  top: 0;
+  z-index: 1;
+} */

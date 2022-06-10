@@ -12,7 +12,7 @@ export default function Header() {
   return (
     <>
       {/* The rest of your app goes here */}
-      <nav className="navbar navbar-expand-lg navbar-expand-md navbar-dark bg-nav fixed-top">
+      <nav className="navbar navbar-expand-md navbar-dark bg-nav">
         <div className="container-fluid">
           <button
             className="navbar-toggler"
@@ -26,7 +26,7 @@ export default function Header() {
             <span className="navbar-toggler-icon" />
           </button>
           <div
-            className="collapse navbar-collapse justify-content-end"
+            className="collapse navbar-collapse justify-content-start"
             id="navbarNavAltMarkup"
           >
             <div className="navbar-nav">

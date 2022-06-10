@@ -8,7 +8,7 @@
 }
 
 button:is(.slick-arrow) {
-  border: 1px solid #fb9039;
+  border: 1px solid #ee550e;
   border-radius: 50%;
   padding: 10px;
   display: flex;
@@ -36,7 +36,7 @@ button:is(.slick-arrow) {
   display: inline-block;
   text-decoration: inherit;
   opacity: 1;
-  color: #fb9039;
+  color: #ee550e;
   font-variant: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -183,7 +183,7 @@ div:is(.item-carousel, .overlay) {
 .btn-view-more {
   font-size: 1.25rem;
   width: max-content;
-  background: #fb9039;
+  background: #ee550e;
   padding: 0.5rem 0.75rem;
   border-radius: 0.25rem;
   margin-top: 1rem;

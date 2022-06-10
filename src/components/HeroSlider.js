@@ -71,7 +71,7 @@ function HeroSlider(props) {
                 <span
                   style={{
                     fontWeight: "bold",
-                    color: "#FB9039",
+                    color: "#ee550e",
                   }}
                 >
                   {MovieService.convertToHumanDate(release_date)}

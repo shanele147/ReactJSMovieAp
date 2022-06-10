@@ -1,12 +1,12 @@
 .bg-nav {
-  background-color: #fb9039;
+    background-color: #393f45;
 }
 
 .navbar-dark .navbar-nav .nav-link {
-  color: #ffffff;
-  cursor: pointer;
-  font-family: "Kanit", "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  font-weight: 400;
-  font-size: 1.25rem;
+    color: #ffffff;
+    cursor: pointer;
+    font-family: 'Kanit', "Lucida Sans", "Lucida Sans Regular",
+            "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    font-weight: 400;
+    font-size: 1.25rem;
 }
