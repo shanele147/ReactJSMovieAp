@@ -7,7 +7,6 @@ import "./MovieDetail.css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper";
 
-
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
@@ -58,25 +57,32 @@ const MovieDetail = () => {
 
   /* get the list of genre */
   const genreList =
-    genres && genres.map((genre, index) => <li className="genre-tag" key={index}>{genre.name}</li>);
+    genres &&
+    genres.map((genre, index) => (
+      <li className="genre-tag" key={index}>
+        {genre.name}
+      </li>
+    ));
   const released =
     release_date && MovieService.convertToHumanDate(release_date);
   /* get the 1st video and the title of the trailer */
   const trailer = trailers && trailers.shift();
   trailer && console.log(trailer.name.split('"').join(""));
 
-
   const { name: crewName, job } = crews;
   const top10Cast = castList.splice(0, 10);
   console.log(top10Cast);
   const casts = top10Cast.map((cast, index) => {
     const { name: castName, character, profile_path } = cast;
-    return (<>
-      <SwiperSlide>
-        <img src={`${image_url}${profile_path}?api_key=${API_KEY}&language=en-US)`}>
-        </img>
-      </SwiperSlide>
-    </>);
+    return (
+      <>
+        <SwiperSlide>
+          <img
+            src={`${image_url}${profile_path}?api_key=${API_KEY}&language=en-US`}
+          ></img>
+        </SwiperSlide>
+      </>
+    );
   });
 
   return (
@@ -105,7 +111,6 @@ const MovieDetail = () => {
             </div>
           </div>
           <div className="col-12 col-md-12 col-sm-12 trailer">
-            
             {trailer && (
               <iframe
                 className="youtube-trailer"
@@ -146,7 +151,8 @@ const MovieDetail = () => {
                 },
               }}
               className="castSwiper"
-            >{casts}
+            >
+              {casts}
             </Swiper>
           </div>
         </div>

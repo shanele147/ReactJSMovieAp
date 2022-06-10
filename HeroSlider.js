@@ -1,4 +1,4 @@
-import React, { Component, useEffect, useState } from "react";
+// import React, { Component, useEffect, useState } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -16,7 +16,7 @@ function HeroSlider(props) {
     slidesToShow: 1,
     slidesToScroll: 1,
     centerMode: true,
-    autoplay: true,
+    autoplay: false,
     autoplaySpeed: 2000,
     pauseOnHover: true,
     responsive: [
@@ -48,47 +48,51 @@ function HeroSlider(props) {
 
   const filerMovies =
     nowPlaying && nowPlaying.filter((movie) => movie.vote_average > 7);
+
   const movieShowList = filerMovies.map((movie, index) => {
     const { title, id, overview, backdrop_path, release_date, vote_average } =
       movie;
+    // console.log(movie);
+    const bgImg = `url("${image_url}${backdrop_path}?api_key=${API_KEY}&language=en-US)"`;
+    console.log(bgImg);
     return (
-      <>
-        <div
-          className="item-carousel"
-          key={index}
-          style={{
-            backgroundImage: `url("${image_url}${backdrop_path}?api_key=${API_KEY}&language=en-US)"`,
-            backgroundSize: "cover",
-          }}
-        >
-          <div className="overlay">
-            <div className="content-container">
-              <h2 className="big-title">{title}</h2>
-              <p className="overview">{overview}</p>
-              <br></br>
-              <p>
-                Release:{" "}
-                <span style={{ fontWeight: "bold", color: "#ee550e" }}>
-                  {MovieService.convertToHumanDate(release_date)}
-                </span>
-              </p>
-              <div>
-                <button
-                  className="btn-view-more"
-                  onClick={() => onViewMore(id)}
-                >
-                  View more
-                </button>
-              </div>
+      <div
+        key={index}
+        className="item-carousel"
+        style={{
+          backgroundImage: { bgImg },
+          backgroundSize: "cover",
+        }}
+      >
+        <div className="overlay">
+          <div className="content-container">
+            <h1 className="big-title">{title}</h1>
+            <p className="overview">{overview}</p>
+            <br></br>
+            <p style={{ fontSize: "1.25rem" }}>
+              Release:{" "}
+              <span
+                style={{
+                  fontWeight: "bold",
+                  color: "#ee550e",
+                }}
+              >
+                {MovieService.convertToHumanDate(release_date)}
+              </span>
+            </p>
+            <div>
+              <button className="btn-view-more" onClick={() => onViewMore(id)}>
+                View more
+              </button>
             </div>
           </div>
         </div>
-      </>
+      </div>
     );
   });
 
   return (
-    <div id="movie-slider" className="w-100">
+    <div id="movie-slider" className="w-100 m-auto">
       <Slider {...settings}>{movieShowList}</Slider>
     </div>
   );

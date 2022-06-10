@@ -27,7 +27,7 @@ const HomePage = () => {
   }; */
 
   const onViewMore = (id) => {
-    navigation(`/movieDetail/${id}`);
+    navigation(`/movies/${id}`);
   };
 
   async function fetchData() {
@@ -44,9 +44,10 @@ const HomePage = () => {
     setTopRatedMovies(movieTopRated);
     setNowPlaying(movieNowPlaying);
 
-    setTimeout(() => {
+    setLoading(false);
+    /* setTimeout(() => {
       setLoading(false);
-    }, 2000);
+    }, 2000); */
   }
 
   // call API
@@ -65,16 +66,19 @@ const HomePage = () => {
         [
           <HeroSlider nowPlaying={nowPlaying} onViewMore={onViewMore} />,
           <CategorySwiper
+            key="1"
             movieList={upcomingMovies}
             onViewMore={onViewMore}
             movieType={MOVIE_UPCOMING}
           />,
           <CategorySwiper
+            key="2"
             movieList={popularMovies}
             onViewMore={onViewMore}
             movieType={MOVIE_POPULAR}
           />,
           <CategorySwiper
+            key="3"
             movieList={topRatedMovies}
             onViewMore={onViewMore}
             movieType={MOVIE_TOP_RATED}
