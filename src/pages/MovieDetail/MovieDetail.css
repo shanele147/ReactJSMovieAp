@@ -1,0 +1,137 @@
+ul,
+li {
+  all: unset;
+  list-style: none;
+  display: flex;
+}
+a:hover {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+li {
+  padding: 0 0.5rem;
+  color: #fb9039;
+}
+
+li:first-child {
+  padding-left: 0;
+}
+
+.section-wrapper {
+  padding: 6rem 0;
+  font-size: 1.25rem;
+  line-height: 1.2;
+}
+
+.bs-header-image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-size: cover;
+  background-position: 50%;
+  width: 100%;
+  height: 100%;
+  z-index: 9988;
+}
+.movie-info {
+  position: relative;
+}
+
+.detail-title {
+  color: #fb9039;
+  -webkit-text-fill-color: #fb9039;
+  line-height: 1;
+}
+
+.hero-img {
+  display: flex;
+  justify-content: center;
+  --height: 30rem;
+  height: var(--height);
+  width: auto;
+  overflow: hidden;
+  padding: 0 0 1.5rem 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.hero-img img {
+  height: 100%;
+  max-height: 100%;
+  border-radius: 0.4rem;
+  -webkit-box-shadow: 6px 6px 11px -2px rgb(5 42 72 / 79%);
+  -moz-box-shadow: 6px 6px 11px -2px rgb(5 42 72 / 79%);
+  box-shadow: 6px 6px 11px -2px rgb(5 42 72 / 79%);
+  -webkit-border-radius: 0.4rem;
+  -moz-border-radius: 0.4rem;
+  -ms-border-radius: 0.4rem;
+  -o-border-radius: 0.4rem;
+}
+/* 
+.hero-img:hover img {
+  cursor: pointer;
+  transform: scale(1.1);
+  transition: all 0.3s ease-in-out;
+} */
+
+.hero-img:hover {
+  cursor: pointer;
+  transform: scale(1.08);
+  transition: all 0.3s ease-in-out;
+}
+.detail-overview {
+  padding-top: 2rem;
+}
+.visit-website {
+  position: absolute;
+  bottom: 0;
+  transform: translateY(-50%);
+}
+.btn-visit-website {
+  display: inline-block;
+  font-weight: 800;
+  padding: 0.5rem 0.75rem;
+  /* background-color: #fb9039; */
+  border: 3px solid #fb9039;
+  border-radius: 0.4rem;
+}
+.btn-visit-website:hover {
+  animation: pulse 1s ease-in-out;
+}
+
+.trailer {
+  position: relative;
+}
+
+.activePoster {
+  background: url("/public/play-button-youtube-logo.jpeg") no-repeat center
+    center;
+  background-size: cover;
+  bottom: 0;
+  left: 0;
+  opacity: 1;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 10;
+  transition: all 0.5s ease-in;
+  width: 100%;
+  height: auto;
+  margin-top: 5rem;
+  cursor: pointer;
+}
+
+.youtube-trailer {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16/9;
+  margin-top: 5rem;
+}
+
+/* animation pulse */
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 1.25rem #e2ea6c, 0 0 3rem #fb9039;
+  }
+}
